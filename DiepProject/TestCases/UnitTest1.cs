@@ -12,10 +12,10 @@ namespace DiepProject
         [TestMethod]
         public void TC01()
         {
-            Account account = new Account("0966007995", "123456");
+            Account account = new Account("0966007995", "123456", "Lý Điệp");
             MainPage mainPage = new MainPage(webDriver).Open();
             mainPage.GotoLoginPage().Login(account.Phone,account.Password).SpaUsername.Click();
-            Assert.AreEqual("Lý Điệp", mainPage.SpaUsername.Text);
+            Assert.AreEqual(account.FullName, mainPage.SpaUsername.Text);
         }
 
     }
