@@ -15,6 +15,7 @@ namespace DiepProject
             Account account = new Account("0966007995", "123456");
             MainPage mainPage = new MainPage(webDriver).Open();
             mainPage.GotoLoginPage().Login(account.Phone,account.Password).SpaUsername.Click();
+            Assert.AreEqual("Lý Điệp", mainPage.SpaUsername.Text);
         }
 
     }

@@ -17,8 +17,6 @@ namespace DiepProject.PageObjects
         static readonly By _spaUsername = By.XPath("//span[@class='text_user_name']");
         static readonly By _lnkDangNhap = By.XPath("//span[@class='sprite_sunny_common_black_reg_icon']");
 
-
-
         #endregion
 
         #region Elements
