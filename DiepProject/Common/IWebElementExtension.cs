@@ -1,14 +1,13 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Remote;
 using System.Threading;
-using Group1Project.TestCases;
 using OpenQA.Selenium.Support.UI;
 using OpenQA.Selenium.Interactions;
-using Group1Project.PageObjects;
+using DiepProject.PageObjects;
 using System;
 using System.Diagnostics;
 
-namespace Group1Project.Common
+namespace DiepProject.Common
 {
     public static class IWebElementExtension
     {
@@ -216,9 +215,9 @@ namespace Group1Project.Common
             IWebElement webElement = null;
             Stopwatch sW = new Stopwatch();
             sW.Start();
-            MainPage mainPage = new MainPage(webDriver);
+            GeneralPage generalPage = new GeneralPage(webDriver);
             WebDriverWait wait = new WebDriverWait(webDriver, TimeSpan.FromSeconds(timeout));
-            wait.Until(d => webElement = mainPage.FindElement(by, timeout));
+            wait.Until(d => webElement = generalPage.FindElement(by, timeout));
             Console.WriteLine("Already waiting for control <{0}> in {1} milliseconds!", by.ToString(), sW.ElapsedMilliseconds);
             sW.Stop();
             return webElement;
@@ -243,8 +242,8 @@ namespace Group1Project.Common
 
             Console.WriteLine("Already waiting for control <{0}> clickable in {1} milliseconds!", by.ToString(), sW.ElapsedMilliseconds);
             sW.Stop();
-            MainPage mainPage = new MainPage(webDriver);
-            return mainPage.FindElement(by);
+            GeneralPage generalPage = new GeneralPage(webDriver);
+            return generalPage.FindElement(by);
         }
 
         /// <summary>

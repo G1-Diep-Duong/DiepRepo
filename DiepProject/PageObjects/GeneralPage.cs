@@ -1,10 +1,10 @@
 ﻿using System;
 using OpenQA.Selenium;
-using Group1Project.Common;
+using DiepProject.Common;
 using System.Diagnostics;
 using OpenQA.Selenium.Support.UI;
 
-namespace Group1Project.PageObjects
+namespace DiepProject.PageObjects
 {
     public class GeneralPage
     {

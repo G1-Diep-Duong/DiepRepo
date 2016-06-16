@@ -6,10 +6,10 @@ using System.Linq;
 using System.Threading;
 using OpenQA.Selenium.Support;
 using System.Diagnostics;
-using Group1Project.PageObjects;
+using DiepProject.PageObjects;
 
 
-namespace Group1Project.Common
+namespace DiepProject.Common
 {
     public static class CommonMethods
     {

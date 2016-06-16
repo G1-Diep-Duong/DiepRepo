@@ -61,8 +61,11 @@
     <Compile Include="Common\CommonMethods.cs" />
     <Compile Include="Common\Constant.cs" />
     <Compile Include="Common\IWebElementExtension.cs" />
+    <Compile Include="DataObjects\Account.cs" />
     <Compile Include="PageObjects\GeneralPage.cs" />
     <Compile Include="PageObjects\LoginPage.cs" />
+    <Compile Include="PageObjects\MainPage.cs" />
+    <Compile Include="TestCases\Testbase.cs" />
     <Compile Include="TestCases\UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -70,9 +73,7 @@
     <Content Include="Dlls\WebDriver.dll" />
     <Content Include="Dlls\WebDriver.Support.dll" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataObjects\" />
-  </ItemGroup>
+  <ItemGroup />
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
