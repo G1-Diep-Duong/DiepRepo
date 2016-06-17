@@ -13,8 +13,8 @@ namespace DiepProject
         public void TC01()
         {
             Account account = new Account("0966007995", "123456", "Lý Điệp");
-            MainPage mainPage = new MainPage(webDriver).Open();
-            mainPage.GotoLoginPage().Login(account.Phone,account.Password).SpaUsername.Click();
+            MainPage mainPage = new MainPage(webDriver);
+            mainPage.Open().GotoLoginPage().Login(account.Phone, account.Password).SpaUsername.Click();
             Assert.AreEqual(account.FullName, mainPage.SpaUsername.Text);
         }
 

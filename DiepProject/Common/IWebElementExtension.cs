@@ -90,7 +90,6 @@ namespace DiepProject.Common
         {
             if (clearFirst) element.Clear();
             element.SendKeys(value);
-            Console.WriteLine(element.GetAttribute("id") + " is set to " + value);
         }
 
         /// <summary>
